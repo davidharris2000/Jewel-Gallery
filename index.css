@@ -1,0 +1,60 @@
+.image-container {
+    position: relative;
+  }
+
+  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    opacity: 0;
+    /* Set the initial opacity to 0 */
+    transition: opacity 0.3s;
+    /* Add a transition effect for smooth fading */
+  }
+
+  .overlay .content {
+    position: absolute;
+    color: white;
+  }
+
+
+  .image-container:hover .overlay {
+    background-color: black;
+    opacity: 0.8;
+    /* final opacity when hovering */
+
+  }
+
+  .view_text {
+    color: whitesmoke;
+    border-bottom: 0.1rem solid whitesmoke;
+  }
+
+
+  .hero_img {
+    background-image: url(https://ik.imagekit.io/fgiv6qmsq/gold-hero-background__1_.jpg?updatedAt=1689394387825);
+  }
+
+
+  .fade-in-image {
+    animation: fade-in 2s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
